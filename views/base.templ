@@ -1,0 +1,24 @@
+package views
+
+templ Base(title string) {
+	<!DOCTYPE html>
+	<html>
+		<head>
+			@Head(title)
+		</head>
+		<body class="bg-ctp-base text-ctp-text [color-scheme:dark]">
+			<main class="w-full container mx-auto px-4 py-4 flex flex-col border">
+				{ children... }
+			</main>
+		</body>
+	</html>
+}
+
+templ Head(title string) {
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, minimum-scale=1"/>
+	<title>{ title }</title>
+	<link rel="stylesheet" href="/css/style.css"/>
+	<script src="/js/htmx.min.js"></script>
+	<script src="/js/_hyperscript.min.js"></script>
+}
