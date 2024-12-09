@@ -2,6 +2,14 @@ package views
 
 templ Main() {
 	@Base("pictureframe") {
-		sup
+		<div
+			class="w-screen h-screen"
+			_="
+			on load wait 10s then location.reload() end
+			on click or touchstart or mousemove debounced at 500ms location.reload() end
+			"
+		>
+			<img src="/images/random" class="object-contain w-full h-full"/>
+		</div>
 	}
 }

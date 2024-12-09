@@ -15,8 +15,8 @@ func Init(e *echo.Echo) {
 	e.GET("/", func(c echo.Context) error {
 		return views.Main().Render(c.Request().Context(), c.Response().Writer)
 	})
-	e.GET("/random.txt/image", func(c echo.Context) error {
-		var folder = "./static/images/random.txt"
+	e.GET("/images/random", func(c echo.Context) error {
+		var folder = "./static/images/random"
 
 		// Read all files in the folder
 		files, err := os.ReadDir(folder)

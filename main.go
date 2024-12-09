@@ -33,7 +33,7 @@ func main() {
 				c.Response().Header().Set("Expires", "0")
 				return next(c)
 			}
-			if c.Request().URL.String() == "/random.txt/image" {
+			if c.Request().URL.String() == "/images/random" {
 				c.Response().Header().Set("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0")
 				c.Response().Header().Set("Pragma", "no-cache")
 				c.Response().Header().Set("Expires", "0")
