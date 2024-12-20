@@ -5,8 +5,8 @@ templ Main() {
 		<div
 			class="w-screen h-screen"
 			_="
-			on load wait 10s then location.reload() end
-			on click or touchstart or mousemove debounced at 500ms location.reload() end
+			on load wait 1800s then location.reload() end
+			on click 1 or touchstart 1 or mousemove 1 location.reload() end
 			"
 		>
 			<img src="/images/random" class="object-contain w-full h-full"/>
